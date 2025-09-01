@@ -22,6 +22,7 @@
     }
     nav {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       background-color: #1c2632;
     }
@@ -52,6 +53,13 @@
       color: #aaa;
       background-color: #1c2632;
     }
+    a {
+      color: #ff4655;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -65,6 +73,7 @@
     <button onclick="showSection('mira')">🧠 Mira</button>
     <button onclick="showSection('comunicacao')">🎙️ Comunicação</button>
     <button onclick="showSection('mentalidade')">🧘 Mentalidade</button>
+    <button onclick="showSection('noticias')">📰 Notícias</button>
   </nav>
 
   <div class="content">
@@ -103,7 +112,21 @@
         <li>Revise suas partidas e aprenda com os erros.</li>
       </ul>
     </div>
+
+    <div id="noticias" class="section">
+      <h2>📰 Últimas Notícias sobre Valorant</h2>
+      <ul>
+        <li><a href="https://www.pichauarena.com.br/valorant/times-confirmados-champions-2025/" target="_blank">11 times confirmados no Champions Paris 2025</a></li>
+        <li><a href="https://www.pichauarena.com.br/valorant/valorant-sage-e-chamber-sao-ajustados/" target="_blank">Atualização 11.04: mudanças em Sage e Chamber</a></li>
+        <li><a href="https://exame.com/pop/valorant-da-tencent-estreia-no-iphone-china-e-arrecada-us-1-mi-no-primeiro-dia-de-lancamento/" target="_blank">Valorant Mobile arrecada US$ 1 milhão no lançamento na China</a></li>
+        <li><a href="https://www.lance.com.br/outros-lances/2025/08/24/os-mapas-mais-faceis-para-iniciantes-no-competitivo-de-valorant/" target="_blank">Mapas mais fáceis para iniciantes no competitivo</a></li>
+      </ul>
+    </div>
   </div>
+
+  <footer>
+    &copy; 2025 Guia Valorant por Teobaldo. Todos os direitos reservados.
+  </footer>
 
   <script>
     function showSection(id) {
