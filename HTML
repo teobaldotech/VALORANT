@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Guia Valorant Interativo</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f1923;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ff4655;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1c2632;
+    }
+    nav button {
+      background: none;
+      border: none;
+      color: #fff;
+      padding: 15px 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    nav button:hover {
+      background-color: #ff4655;
+    }
+    .content {
+      padding: 20px;
+    }
+    .section {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #aaa;
+      background-color: #1c2632;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dicas para Melhorar no Valorant</h1>
+  </header>
+
+  <nav>
+    <button onclick="showSection('fundamentos')">🎯 Fundamentos</button>
+    <button onclick="showSection('mira')">🧠 Mira</button>
+    <button onclick="showSection('comunicacao')">🎙️ Comunicação</button>
+    <button onclick="showSection('mentalidade')">🧘 Mentalidade</button>
+  </nav>
+
+  <div class="content">
+    <div id="fundamentos" class="section active">
+      <h2>🎯 Domine os Fundamentos</h2>
+      <ul>
+        <li>Conheça os agentes e suas funções.</li>
+        <li>Estude os mapas e seus callouts.</li>
+        <li>Gerencie sua economia com inteligência.</li>
+      </ul>
+    </div>
+
+    <div id="mira" class="section">
+      <h2>🧠 Treine Mira e Movimentação</h2>
+      <ul>
+        <li>Faça aquecimento diário com Aim Lab ou no campo de treino.</li>
+        <li>Aprenda a controlar o recoil das armas.</li>
+        <li>Mantenha a mira na altura da cabeça.</li>
+      </ul>
+    </div>
+
+    <div id="comunicacao" class="section">
+      <h2>🎙️ Comunicação Eficiente</h2>
+      <ul>
+        <li>Use callouts curtos e precisos.</li>
+        <li>Compartilhe informações úteis com o time.</li>
+        <li>Evite ruído e mantenha o respeito.</li>
+      </ul>
+    </div>
+
+    <div id="mentalidade" class="section">
+      <h2>🧘 Mentalidade Competitiva</h2>
+      <ul>
+        <li>Evite tilt e foque na evolução.</li>
+        <li>Jogue com propósito e metas claras.</li>
+        <li>Revise suas partidas e aprenda com os erros.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    Criado por Copilot • Última atualização: Setembro 2025
+  </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
