@@ -1,0 +1,24 @@
+# 🎮 Guia Valorant Interativo
+
+Um projeto simples e direto feito em HTML, CSS e JavaScript para ajudar jogadores de Valorant a melhorarem suas habilidades com dicas organizadas por categoria. Inclui fundamentos, mira, comunicação, mentalidade e uma seção de notícias atualizadas.
+
+## 📌 Funcionalidades
+
+- Navegação interativa por seções
+- Dicas práticas para evoluir no jogo
+- Links para notícias recentes sobre Valorant
+- Design responsivo e visual moderno
+
+## 🧠 Seções do Guia
+
+- **🎯 Fundamentos**: Conhecimento básico sobre agentes, mapas e economia.
+- **🧠 Mira**: Técnicas de treino e posicionamento.
+- **🎙️ Comunicação**: Boas práticas para se comunicar com o time.
+- **🧘 Mentalidade**: Foco, evolução e revisão de partidas.
+- **📰 Notícias**: Links para artigos e atualizações relevantes.
+
+## 🚀 Como Usar
+
+1. Clone ou baixe o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/guia-valorant.git
