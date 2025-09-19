@@ -33,18 +33,40 @@
       padding: 15px 20px;
       cursor: pointer;
       font-size: 16px;
+      transition: background 0.3s;
     }
-    nav button:hover {
+    nav button:hover,
+    nav button.active {
       background-color: #ff4655;
+      font-weight: bold;
+      border-bottom: 3px solid #fff;
     }
     .content {
       padding: 20px;
     }
     .section {
       display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
     }
-    .active {
+    .section.active {
       display: block;
+      opacity: 1;
+    }
+    .section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .section li {
+      background: #1c2632;
+      margin: 8px 0;
+      padding: 12px 15px;
+      border-radius: 8px;
+      transition: transform 0.2s ease-in-out, background 0.3s;
+    }
+    .section li:hover {
+      background: #ff4655;
+      transform: translateX(5px);
     }
     footer {
       text-align: center;
@@ -73,6 +95,7 @@
     <button onclick="showSection('mira')">🧠 Mira</button>
     <button onclick="showSection('comunicacao')">🎙️ Comunicação</button>
     <button onclick="showSection('mentalidade')">🧘 Mentalidade</button>
+    <button onclick="showSection('jogabilidade')">🎮 Jogabilidade</button>
     <button onclick="showSection('noticias')">📰 Notícias</button>
   </nav>
 
@@ -113,6 +136,19 @@
       </ul>
     </div>
 
+    <div id="jogabilidade" class="section">
+      <h2>🎮 Dicas de Jogabilidade</h2>
+      <ul>
+        <li>Controle seus pixels — use cantos de forma inteligente para ter vantagem nos duelos.</li>
+        <li>Aprenda a “jogar tempo” — nem sempre precisa matar, atrasar o inimigo também ganha rodadas.</li>
+        <li>Use utilitárias (smokes, flashes, paredes) para executar estratégias em equipe.</li>
+        <li>Não corra em momentos críticos — andar em silêncio pode decidir rounds.</li>
+        <li>Jogue em dupla — troque kills com um parceiro para aumentar a chance de vitória.</li>
+        <li>Evite padrões repetitivos — varie a forma de jogar para não ser previsível.</li>
+        <li>Assista replays de jogadores profissionais e copie movimentações.</li>
+      </ul>
+    </div>
+
     <div id="noticias" class="section">
       <h2>📰 Últimas Notícias sobre Valorant</h2>
       <ul>
@@ -131,8 +167,13 @@
   <script>
     function showSection(id) {
       const sections = document.querySelectorAll('.section');
+      const buttons = document.querySelectorAll('nav button');
+
       sections.forEach(section => section.classList.remove('active'));
+      buttons.forEach(btn => btn.classList.remove('active'));
+
       document.getElementById(id).classList.add('active');
+      event.target.classList.add('active');
     }
   </script>
 
